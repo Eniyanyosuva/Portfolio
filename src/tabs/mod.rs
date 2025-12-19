@@ -4,5 +4,5 @@ mod tab;
 mod tabs;
 
 pub use content::TabContent;
-pub use tab::Tab;
+pub use tab::{Tab, TabComponent};
 pub use tabs::Tabs;
