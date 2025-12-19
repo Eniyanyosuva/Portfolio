@@ -16,7 +16,7 @@ pub fn Header() -> impl IntoView {
 
     view! { class = styler_class,
       <div class="header">
-        "BIOS SETUP UTILITY"
+        "WYATT AVILLA"
       </div>
     }
 }
