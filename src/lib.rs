@@ -3,6 +3,7 @@ use wasm_bindgen::prelude::*;
 mod app;
 mod footer;
 mod header;
+mod tabs;
 
 #[wasm_bindgen]
 pub fn hydrate() {}
