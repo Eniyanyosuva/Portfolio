@@ -1,6 +1,7 @@
 use wasm_bindgen::prelude::*;
 
 mod app;
+mod header;
 
 #[wasm_bindgen]
 pub fn hydrate() {}

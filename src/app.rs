@@ -1,3 +1,4 @@
+use crate::header::Header;
 use leptos::prelude::*;
 use stylers::style;
 
@@ -26,15 +27,6 @@ pub fn App() -> impl IntoView {
             display: flex;
             flex-direction: column;
             overflow: hidden;
-        }
-
-        .header {
-            background: #0000AA;
-            color: #FFFFFF;
-            padding: 8px;
-            text-align: center;
-            font-weight: bold;
-            border-bottom: 2px solid #FFFFFF;
         }
 
         .tabs {
@@ -97,9 +89,7 @@ pub fn App() -> impl IntoView {
 
     view! { class = styler_class,
         <div class="bios-container">
-            <div class="header">
-                "BIOS SETUP UTILITY"
-            </div>
+            <Header />
 
             <div class="tabs">
                 <div
