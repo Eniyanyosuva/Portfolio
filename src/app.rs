@@ -7,7 +7,7 @@ use stylers::style;
 #[component]
 #[allow(clippy::too_many_lines)]
 pub fn App() -> impl IntoView {
-    let active_tab = RwSignal::new(&Tab::Main);
+    let active_tab = RwSignal::new(&Tab::About);
 
     let styler_class = style! { "App",
         * {

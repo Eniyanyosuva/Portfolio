@@ -4,22 +4,15 @@ use stylers::style;
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Display)]
 pub enum Tab {
-    Main,
-    Advanced,
-    Security,
-    Boot,
-    Exit,
+    About,
+    Employment,
+    Education,
+    Projects,
 }
 
 impl Tab {
     pub fn all() -> &'static [Tab] {
-        &[
-            Tab::Main,
-            Tab::Advanced,
-            Tab::Security,
-            Tab::Boot,
-            Tab::Exit,
-        ]
+        &[Tab::About, Tab::Employment, Tab::Education, Tab::Projects]
     }
 }
 
