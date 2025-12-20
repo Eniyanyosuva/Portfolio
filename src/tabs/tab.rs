@@ -36,7 +36,7 @@ pub fn TabComponent(tab: &'static Tab, active_tab: RwSignal<&'static Tab>) -> im
             padding: 4px 16px;
             cursor: pointer;
             color: #FFFFFF;
-            background: #0000AA;
+            background: #787878;
             border-right: 2px solid #FFFFFF;
         }
 

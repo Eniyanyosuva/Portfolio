@@ -7,7 +7,7 @@ pub fn Tabs(active_tab: RwSignal<&'static Tab>) -> impl IntoView {
     let styler_class = style! { "Tabs",
         .tabs {
             display: flex;
-            background: #0000AA;
+            background: #787878;
             border-bottom: 2px solid #FFFFFF;
         }
     };
