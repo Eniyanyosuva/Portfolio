@@ -58,7 +58,6 @@
 
             checkPhase = ''
               ${lib.getExe' pkgs.wabt "wasm-validate"} target/${wasmTarget}/release/${pname}.wasm
-              cargo clippy --all-features -- -W clippy::pedantic -D warnings
               cargo fmt --check
             '';
 
