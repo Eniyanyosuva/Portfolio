@@ -136,9 +136,20 @@
                 ];
               };
 
-              clippy = {
+              nixFormatting = {
                 inputs = [ pkgs.nixfmt-rfc-style ];
-                cmds = [ "cargo check --offline" ];
+                cmds = [ "nixfmt --check ${self}" ];
+              };
+
+              nixCheck = {
+                inputs = with pkgs; [
+                  deadnix
+                  statix
+                ];
+                cmds = [
+                  "statix check"
+                  "deadnix check"
+                ];
               };
             };
           in
