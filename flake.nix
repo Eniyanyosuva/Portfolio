@@ -84,6 +84,7 @@
             <head>
               <meta charset="utf-8">
               <title>wyattavilla.dev</title>
+              <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
               <link rel="modulepreload" href="./${pname}.js">
               <link rel="stylesheet" href="./main.css">
             </head>
