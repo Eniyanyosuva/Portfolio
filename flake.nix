@@ -19,7 +19,7 @@
         };
         inherit (pkgs) lib;
 
-        nativeRustToolchain = with pkgs; [
+        rustBin = with pkgs; [
           (rust-bin.nightly.latest.default.override {
             extensions = [
               "clippy"
@@ -32,7 +32,7 @@
       {
 
         devShells.default = pkgs.mkShell {
-          nativeBuildInputs = nativeRustToolchain ++ (with pkgs; [ rust-analyzer ]);
+          nativeBuildInputs = rustBin ++ (with pkgs; [ rust-analyzer ]);
 
           shellHook = ''
             export CARGO_BUILD_TARGET="${wasmTarget}"
@@ -58,7 +58,6 @@
 
             checkPhase = ''
               ${lib.getExe' pkgs.wabt "wasm-validate"} target/${wasmTarget}/release/${pname}.wasm
-              cargo fmt --check
             '';
 
             installPhase = ''
@@ -99,7 +98,7 @@
               </html>
             '';
 
-            nativeBuildInputs = nativeRustToolchain;
+            nativeBuildInputs = rustBin;
           };
 
         apps.default = {
@@ -112,6 +111,39 @@
             ''
           );
         };
+
+        checks =
+          let
+            mkCheck =
+              {
+                name,
+                cmds,
+                src ? self,
+                inputs ? [ ],
+              }:
+              pkgs.runCommand name { buildInputs = inputs; } ''
+                cd ${src}
+                ${pkgs.lib.strings.concatLines cmds}
+                touch $out
+              '';
+
+            checkArgs = {
+              rustFormatting = {
+                inputs = rustBin ++ [ pkgs.leptosfmt ];
+                cmds = [
+                  "leptosfmt --check ${self}"
+                  "cargo fmt --check"
+                ];
+              };
+
+              clippy = {
+                inputs = [ pkgs.nixfmt-rfc-style ];
+                cmds = [ "cargo check --offline" ];
+              };
+            };
+          in
+          builtins.mapAttrs (name: args: mkCheck (args // { inherit name; })) checkArgs;
+
       }
     );
 }
