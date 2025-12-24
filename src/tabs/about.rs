@@ -110,10 +110,10 @@ pub fn About() -> impl IntoView {
         <div class="about-section">
             <div class="about-links">
                 <a href="https://github.com/wyatt-avilla" class="about-link-button" target="_blank" rel="noopener noreferrer">
-                    <img src="/assets/github.svg" alt="GitHub" class="button-icon" />
+                    <img src="./assets/github.svg" alt="GitHub" class="button-icon" />
                 </a>
                 <a href="https://www.linkedin.com/in/wyatt-avilla/" class="about-link-button" target="_blank" rel="noopener noreferrer">
-                    <img src="/assets/linkedin.svg" alt="LinkedIn" class="button-icon" />
+                    <img src="./assets/linkedin.svg" alt="LinkedIn" class="button-icon" />
                 </a>
             </div>
 

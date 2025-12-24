@@ -11,7 +11,7 @@ pub fn App() -> impl IntoView {
     let styler_class = style! { "App",
         @font-face {
             font-family: "Perfect DOS VGA";
-            src: url("/assets/Perfect_DOS_VGA_437.ttf") format("truetype");
+            src: url("./assets/Perfect_DOS_VGA_437.ttf") format("truetype");
             font-weight: normal;
             font-style: normal;
         }

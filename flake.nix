@@ -87,8 +87,8 @@
               <head>
                 <meta charset="utf-8">
                 <title>wyattavilla.dev</title>
-                <link rel="modulepreload" href="/${pname}.js">
-                <link rel="stylesheet" href="/main.css">
+                <link rel="modulepreload" href="./${pname}.js">
+                <link rel="stylesheet" href="./main.css">
               </head>
               <body>
                 <script type="module">
