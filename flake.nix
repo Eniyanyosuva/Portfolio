@@ -83,6 +83,7 @@
             <html>
             <head>
               <meta charset="utf-8">
+              <meta name="darkreader-lock">
               <title>wyattavilla.dev</title>
               <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
               <link rel="modulepreload" href="./${pname}.js">
