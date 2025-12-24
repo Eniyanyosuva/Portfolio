@@ -22,7 +22,6 @@ pub fn About() -> impl IntoView {
             gap: 0.5rem;
             padding: 0.5rem 1rem;
             background-color: transparent;
-            border: 1px solid #787878;
             border-radius: 4px;
             color: inherit;
             text-decoration: none;
@@ -33,6 +32,11 @@ pub fn About() -> impl IntoView {
 
         .about-link-button:hover {
             background-color: rgba(120, 120, 120, 0.1);
+        }
+
+        .button-icon {
+            width: 24px;
+            height: 24px;
         }
 
         .about-content {
@@ -54,10 +58,10 @@ pub fn About() -> impl IntoView {
         <div class="about-section">
             <div class="about-links">
                 <a href="https://github.com/wyatt-avilla" class="about-link-button" target="_blank" rel="noopener noreferrer">
-                    <img src="/assets/github128.png" alt="GitHub" class="button-icon" />
+                    <img src="/assets/github.svg" alt="GitHub" class="button-icon" />
                 </a>
                 <a href="https://www.linkedin.com/in/wyatt-avilla/" class="about-link-button" target="_blank" rel="noopener noreferrer">
-                    <img src="/assets/linkedin128.png" alt="LinkedIn" class="button-icon" />
+                    <img src="/assets/linkedin.svg" alt="LinkedIn" class="button-icon" />
                 </a>
             </div>
 
