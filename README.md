@@ -1,6 +1,6 @@
 # Portfolio
 
-A modern, responsive portfolio website built with Rust and WebAssembly.
+A portfolio website built with Rust and WebAssembly.
 
 ## 🌐 Live Demo
 
@@ -77,13 +77,5 @@ You can also trigger deployment manually:
 1. Go to the [Actions tab](https://github.com/Eniyanyosuva/portfolio/actions)
 2. Select "Deploy to GitHub Pages"
 3. Click "Run workflow"
-
-## 📧 Contact
-
-- GitHub: [@Eniyanyosuva](https://github.com/Eniyanyosuva)
-- Portfolio: [https://eniyanyosuva.github.io/portfolio/](https://eniyanyosuva.github.io/portfolio/)
-- X/Twitter: [@eniyos](https://x.com/eniyos?s=21)
-
----
 
 **Note:** This portfolio was built using rust and customized for personal use. 
